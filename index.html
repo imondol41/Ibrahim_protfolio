@@ -9,212 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --bg: linear-gradient(180deg, #b8ccdc 0%, #505d8e 100%), url('noise-bg.png') center center/cover repeat;
-      --bg-alt: linear-gradient(180deg, #598bbd 0%, #7a88b9 100%), url('noise-bg.png') center center/cover repeat;
-      --text: #000000;
-      --text-secondary: #000000;
-      --accent: #000000;
-      --accent2: #fbfffe;
-      --glass: rgba(116, 116, 173, 0.6);
-      --blur: 16px;
-      --radius: 18px;
-      --transition: 0.4s cubic-bezier(.77,0,.18,1);
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0; padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', Arial, sans-serif;
-      scroll-behavior: smooth;
-      min-height: 100vh;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background: url('noise-bg.png') center center/cover repeat;
-      opacity: 0.45;
-      mix-blend-mode: multiply;
-    }
-    body::before {
-      display: none;
-    }
-    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
-    a:hover { color: var(--accent2); }
-    .container {
-      max-width: 900px; margin: 0 auto; padding: 4rem 2rem 2rem 2rem;
-      background: transparent;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 32px #000a;
-      backdrop-filter: blur(var(--blur));
-      position: relative;
-      z-index: 1;
-    }
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-    .hero .name {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 900;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-    }
-    .hero .role {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: #222;
-      margin-bottom: 0.7rem;
-      line-height: 1.1;
-    }
-    .hero .tagline {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.2rem;
-    }
-    .stats {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .stats img { height: 28px; }
-    .skills, .tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 1.2rem;
-      justify-content: center;
-    }
-    .skill-pill, .tool-pill {
-      background: linear-gradient(90deg, var(--accent2) 0%, var(--accent) 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.5em 1.2em;
-      border-radius: 999px;
-      box-shadow: 0 2px 16px #2196F333;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 2.5rem 0 1.2rem 0;
-      text-align: center;
-    }
-    .about {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .project-card {
-      background: var(--bg-alt);
-      border-radius: var(--radius);
-      box-shadow: 0 2px 16px #2196F333;
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: box-shadow var(--transition), transform var(--transition);
-    }
-    .project-card:hover {
-      box-shadow: 0 0 24px 2px var(--accent2);
-      transform: scale(1.03);
-    }
-    .project-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 0.3rem;
-    }
-    .project-desc {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      margin-bottom: 0.7rem;
-    }
-    .project-tech {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 0.7rem;
-    }
-    .project-tech span {
-      background: #222;
-      color: var(--accent2);
-      font-size: 0.95rem;
-      padding: 0.2em 0.8em;
-      border-radius: 999px;
-    }
-    .project-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5em;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      color: #fff;
-      font-weight: 700;
-      padding: 0.4em 1em;
-      border-radius: 999px;
-      box-shadow: 0 2px 12px #73addc33;
-      margin-right: 0.7rem;
-      font-size: 0.95rem;
-    }
-    .project-links a:hover {
-      box-shadow: 0 0 24px 2px var(--accent2);
-      background: linear-gradient(90deg, var(--accent2), var(--accent));
-    }
-    .stats-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-    .stats-section img { max-width: 320px; border-radius: var(--radius); background: #111; }
-    .contact {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .contact-links {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .contact-links a img { height: 38px; }
-    .quote {
-      font-size: 1.1rem;
-      color: var(--accent2);
-      margin: 2rem 0;
-      text-align: center;
-    }
-    .footer {
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 1rem;
-      margin-top: 2rem;
-    }
-    @media (max-width: 900px) {
-      .container { padding: 2rem 0.5rem; }
-      .projects { grid-template-columns: 1fr; }
-      .stats-section img { max-width: 100%; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -261,23 +56,33 @@
     <div class="section-title">🎯 Featured Projects</div>
     <div class="projects">
       <div class="project-card">
-        <div class="project-title">Customer Status Prediction ML Project</div>
-        <div class="project-desc">Advanced ML pipeline with 8 algorithms, ensemble methods, and professional documentation.</div>
+        <div class="project-title">Bus Tracking System</div>
+        <div class="project-desc">Real-time bus tracking application for improved transportation management and user experience.</div>
         <div class="project-tech">
-          <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
+          <span>GPS Tracking</span><span>Real-time</span><span>IoT</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/yourusername/customer-status-prediction-ml" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://github.com/imondol41/Bus-Tracking" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-title">Data Science Portfolio</div>
-        <div class="project-desc">Multi-project collection with real-world datasets and industry applications.</div>
+        <div class="project-title">Machine Learning Projects</div>
+        <div class="project-desc">Collection of machine learning algorithms and implementations for various data science applications.</div>
         <div class="project-tech">
-          <span>Python</span><span>Jupyter</span><span>SQL</span>
+          <span>Python</span><span>ML</span><span>Data Science</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/yourusername/data-science-portfolio" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://github.com/imondol41/IBRAHIM-ml-" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">IELTS Demo Platform</div>
+        <div class="project-desc">Interactive IELTS preparation and practice platform with demo tests and learning resources.</div>
+        <div class="project-tech">
+          <span>Web Development</span><span>Education</span><span>Testing</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/imondol41/ielts-demo" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </div>
     </div>
@@ -554,6 +359,10 @@
         </a>
         <a href="https://linkedin.com/in/ibrahim-kholilulla-32230431a" target="_blank">
           <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+        </a>
+        <a href="https://linkedin.com/in/ibrahim-kholilulla-32230431a" target="_blank">
+          <img src="<img alt="Static Badge" src="https://img.shields.io/badge/fiverr?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAZsAAAB7CAMAAACVdd38AAAAw1BMVEX%2F%2F%2F8AORIdv3MAGwD8%2Fv0AJAAAKgAAOA%2Bkr6YAKwAALwDM0s0AIgCtt6%2BhrKMANACCkoXc4d0AJwAAHwAALgAAGQAeRieUoJYAHQAAGAAAIAAANgoAumbn6uhjeGcAFAAvUDYAAADDysTu8O9TaleFlIhrfm%2Fq7eu5wbt4iXtMZVGOnJEAumRDXkgLPRgaQyMADgApTTE6WEDf9Oig3rx10qBdzJK%2B6NGR2rLM7dopwXjs%2BPJCxoRTyY2e3rvF6tWy5MgruYeNAAAMb0lEQVR4nO2da3vaOBOGHTAYG4PjUwhxgBZIQkhImrRNu9vuu%2F3%2Fv2oJGHzSM5IdLHO9%2BPmKD7JvZiSNZmRFEZS96N%2BPVxdPZww1VdGr1Dq07P7SNR3PsAKNhaZmU5Vmg2dXt5hMajaVyh4P9YAEU7OpRrPx0OCBqdlUooEvQqZmI193nxwhMjUb6eqa9ACgZlOZehP2eLlmU7k6Q2EyNRu5WkxyoKnZyJSdC03NRqJUizvdrNlUpLHYtKZmI1%2FdZj40NRt5es7n0Wo28rRo5URTs5Gm3GZTs5GlrpkXTc1Glm5zDtJqNvJ0JR5Hq9nIVZc7EggML6XPNRspevBoMI67un8YJPVQdaNPREty1ab1uqhtpDJRLk1r9qpu3ilrdkmw8btVN%2B%2BkZRN243Sqbt1pa4rzN4KLqht34lpgNu3abKpVrw3ZXI2qbtyJi2DjVt22Uxdmo7Wrbtupq2ZzvKrZHK9qNser%2FxM26mxkrzWaVd2QD0lNiGKjp44VU%2FoOqR9ztE3sTLt3M35pNd0rcy330jdex4OFXeBV8G4n9OzEWQINaialIzTvkc4C%2BtxVXiboxy9zsmn4xInBPGHUmb%2FXpSYyH7XA8Jyr1rzPnZ11P1NPEWm2uJlfmD730f0v8avbvfvVWfTjkP0ESWEWB1Grq%2FRwqMGl%2Fj0zH56n9xmH91%2BasC5Vs%2FTL5wGNh1hVbEVseqthij6SFr3%2B2eDJbRtWbEVZKAAmcJOPaP1UKg5tO1OiZcQ0eJjpRwTqUgPdX1L3E2GzCBzhLKSIzY2faduRsCFSeI17omVjuMpnrdJklk2hDBTLfMF0%2BGzUeZ5kih0b22J0FMfCZgofej2%2BwHLhRZ3kEp96OxEusQvMVzQw4LK5C3KlIIVsFhOWpR0LG8WD%2FzYTr9Zhoqm8nkUr1ysLJufF2Mz4xfwJbdn02OUyR8PmBuaHeDewYffYE47jx43dvElb%2BjPTdDhs1Kec%2Ba4bNl1QyXQ0bGzonoIn2DALvvJWrM8YPdF5Qey7Dll5Dxw287w5le9sZi3wFEfDRrmAfzkXeX%2F7Cp0S76S6bu7k7Y18hr3SbHq5U5Hf2SwR0ONh04dTWtZMZaMBPMWI%2BotpjmLuVLtu87FRkQFgrdks4B%2FseNjgaWTwCtr1ScDUpvnKUhNyMnAoNvZ5ftepWQrYN%2BvsmNgQGYnZaeRGd5jm8%2F5lfgDNumXpuRXBpp2%2FJmnN5omIiBwRG5wi0manI%2BKggD4IDxkVyKqPy025U4KNhq2Y0PMFbuARsVFhT2qx451zaGj%2BXXhI3jFtRpPk5IrK0i%2F2LyDOOiI2RFUPs0BEheXAwS5eMy4weE5K0xO35ldQHFDHxAZXwzkLRqtwCuPOB%2FZwSEdYRsJmT5YNnkoa2dEsFRTwt%2F%2F1mfmxzmYrN%2F6%2FOF02sK5HcxitghE4K4zXkNtTaJbumFeuazqcjUY1r2azlg17kFY23ok9YBivobanCBxn3J%2Fao9mdPR2smjplYHqsrOt02eDJpJGNC3ONDI9ptdanxBLNbOBQJtaMplcnzKaDZixakGkUjL%2BFi3FTaFeBmRlaqLdETZEX%2FTGOj42eFOWfdSh8TsQGx20y8c4R9FhX28tBswmCOyWrBbFRX5SyIMjGMhKPLjbJ0iwv%2BcacMwE2%2FYQ6txiO0ekDdXADY50JnE7uZ%2Fo7QRMLlxS6aPys6ewIUBfDae%2BjAyJsrJa5PE88%2BlwAjucG44f0OxNgk1Kx3EFirSViA%2BM2wUvqcjD65m0pwkwCWPSIZ0PRCpJA9X5znkk3uOEu6xjuuVh%2BHE8lslEcdJSfdEQq9H7%2BJotphqyAOVXaCo%2B5r3Yt5LIxnhnoz3lszPGhKsvLZAMnlKmKOGxg2wUF6PJ8nGKL11%2F2w0QeG50Z%2BeOx8Q9X7Vcmmy5aabKWiavB2FsYr3kFLp7MqMLD8l0aGYeNwQ7KcthcHrDqv0w2OHLsJ8we%2Br7h5jA44COSdqhh4lXYG9BsomWjpGg2OsjpKaRS2QzQf9cRimuF8RrURM0inwwOMHbL4jQbH%2FTnJBsEtJhKZTNC%2F91EVhPMmAoJIpdHujQiZ2G3gkSygcMMko1J5fjmVqlsYE%2BhmbGDkOfbxWsMcDOwgroTfPVai3PAu5ooz51ic%2BAdGcplA68eSzkboQhLaBcjNFVp0WUCKpziuNsTKTaZDOy9KDYH3pGhXDZwOTPmj6DvMXmpB55DCQeWwmoGig22SYpN87Blc%2BWygTP6WD%2B%2BQi4tjEDBAUVhhTEjis0ltEmCTfCpOAeWSmYDE9DN3TAITvq9cKkFl34UVWi0VJ4NHgISbIhk70IqmY2CVrp2bx67rF1vXCgdiVQ4UCPYWGMFiWDDzIT4gMpmgx5lP6RBZrF3EPm3SOYpvDTBxntQkAg2rcOEOPcqmw0sKdiZBXr1uzEPzo4qrNBjUXmdeHhOsHEPXEFfNhu4pBnOzuEL2uXm3h0g9ynTSPrWpHci2PgfAcFQ6WzQEDnMCUSPuk%2F%2FtA%2Fv0862M1%2BxOum0KJ%2F2AQ4slc7mDo3DtoahgSvt%2F7llsOHaTSE2iQSrQ6h0NjDmuPHpqDuKgjrUhqJFVRIbke0d8qh8NmiQvBmnooqoKG5Qs2Hd6kBsYFzrPeMFTV6ipZkSfFpYpFizwTF%2BZwoXwGLz8hEs0yssTdtcuWaD38Hab6G7x%2BZ%2BJcxvwjyfmg0%2Beu1aUFCgGZthl8BmO3yv2Sh4YbPVBcOERAIbrod3zGIacuNpp8PGBqtnARoJJArdYRzamdoFxV1bOx02ygtggCwiUUsNk5nIDb8EVLN5F94KgqlkuS5cRGDUiuRSzeZdcP2MrWSkEeYTfDThqGI2%2FB08pbAhKtRZcgVvBvfGEVN1bL5%2Be2s8Xl9f%2F%2F39zy%2FiMDlsiK%2BFZJVODYMpuZwENZ6qYvPj9%2BN1I9T14z9%2FwQPlsFHy7NyTvgQGe0m6hRGrbCqmath8%2Fb0HE%2BL5B9mOJDa4Rj1733QeBS4BoQ1n%2FuXihsqYroTNt8dGRo9%2F2MdKYpPjw8jZbBViPxXi3Y%2F8s8BrufMOSmeqgs336yyaNZyfzIMlsVHEd4i5zPTw2KlpBl6iX22JWu3Lp%2FMpy%2FlVwIaNZu3XmHBkseF84jVSpuBQoXor6wJ1OecRUM1w%2FGU%2Fg1w%2Bm%2F8BNGvL%2BcE4XBYbXAqdEmtjQmKjOeuM7bLOU07U0l3rfiG611A5bL4y%2Bpq95TAGBLLYwJKCtFh7390Rm9oFzXTV9fsJK4YbfDef10FkPtLZ%2FMZoGo237PHS2BA72seVKjcMRe5m0w76SZ72vY9GD4Fu7jeHlM3mB%2FRoG6%2F2NccrOzAbVSxuw84MG5Ena7q%2FGkztmaqoM3tx%2FuySA%2Fb2zs5ksyHNhmU40tgI5pyD6STeKm%2BrwHNMt9lsui3HoJ2nZu7uIJnNV9Js1oaTeXJ5bIg97SOhUr5Z7s3UkfZmI5vNNw6b68xQTR4bXA4dPx2tyfTzROQIxV6gZDZvNJpGIzPHkchGIG5DpEYeqNQjtvOgZDY8NNkORyIb%2FJWCvTy8XAZrrnMpvqGDZDYcl9Zo%2FE6fIZGN8sz961MrMofYTFVzYh2uXDYql00j88QS2eBPDoSia8Bv861ss5TYIbpmExPe1z5UZmO1pF7zfvUkLTNx%2FdqnxbXiTHGG9GqY%2BvyxstzU5yLqsYDYzTbCGy6Emp19BI6TKrCtx9Bx4RXM7cvj7m81eyru1tJojm7u%2BW%2F6DKlsOKEX5pcKklI%2FFR0QXGbWryWz%2BUWsEGzYZM6Qy4aM2xi4qD%2BmcaF6nGCS3WpGdqzzH5rN98wJctnAPZ02p4rl0HaY38%2Bk5QWMiZNsNv8e7RrBVvjrkvR3WeOyL3LG1gKfGUE9rrW1rNnIZkPEbXKkNw%2FEvlgcPofD2q5WqYAN1eNcM%2FpayWxgSUG%2BDNrZ7VCQjtb20KZm8nM5%2FkA4j6zsTtlsYElBzszz0e2Q%2FGDHVlYrQN%2BsrCQH6ifoch6%2FsY6WzQaWFHDiNYwrDSyTGlqcWe3JktqZqYrcwZ9My2GjUXqTNtIE38KBJ33hsFGWLfaJn%2BkdHpnq3ltum7kGHXjOcNWh9%2F7pfinyFPeX8KwrgSb%2FYVjONUhXt%2FsdJOwNFHhOp897xfCGAg%2FGulzn9sk3Hd0zLCsIAssyvHbLNVc3zFTOhEbEo%2BOnmBZ6YZF%2BvaXoPH4%2F1B75xyjVXvRvbsfL19fVfHz%2F0JsWMEGJ%2BustVuNx%2FT07r6lVodQfP9%2F%2BbjR%2Bv%2F1MxND%2BA0MfLMY9v8mBAAAAAElFTkSuQmCC">
+" alt="LinkedIn" />
         </a>
         
 </div>
