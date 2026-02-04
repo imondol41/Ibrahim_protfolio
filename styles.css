@@ -248,6 +248,16 @@ a:hover {
   box-shadow: 0 12px 32px rgba(239, 68, 68, 0.7) !important;
 }
 
+#downloadCV:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.6);
+}
+
+#downloadCV:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
 .section-title {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 800;
