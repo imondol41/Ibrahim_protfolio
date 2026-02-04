@@ -10,6 +10,7 @@
   --accent-pink: #ec4899;
   --accent-cyan: #06b6d4;
   --accent-green: #10b981;
+  --accent-red: #ef4444;
   --glass-bg: rgba(30, 41, 59, 0.7);
   --blur: 20px;
   --radius: 16px;
@@ -186,6 +187,40 @@ a:hover {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  animation: skillFloat 3s ease-in-out infinite;
+}
+
+.skill-pill:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.skill-pill:nth-child(even) {
+  animation-delay: 1s;
+}
+
+.skill-security {
+  background: linear-gradient(135deg, #ef4444, #dc2626, #b91c1c) !important;
+  animation: securityPulse 2s ease-in-out infinite !important;
+}
+
+@keyframes skillFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes securityPulse {
+  0%, 100% {
+    transform: translateY(0px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.6);
+  }
 }
 
 .skill-pill::before, .tool-pill::before {
@@ -204,8 +239,13 @@ a:hover {
 }
 
 .skill-pill:hover, .tool-pill:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5);
+  animation: none;
+}
+
+.skill-security:hover {
+  box-shadow: 0 12px 32px rgba(239, 68, 68, 0.7) !important;
 }
 
 .section-title {

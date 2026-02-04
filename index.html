@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -19,18 +20,21 @@
         <div style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:1.2rem;max-width:420px;">
           Hi, my name is Ibrahim Kholilulla, a Junior Cyber Security Engineer in search of new opportunities. Passionate about network security, data analytics, and building secure systems.
         </div>
-        
+        <button id="downloadCV" style="background:linear-gradient(135deg,#2196F3,#1976D2);color:#fff;font-weight:700;padding:0.8em 2em;border:none;border-radius:8px;font-size:1rem;cursor:pointer;box-shadow:0 4px 12px rgba(33,150,243,0.4);transition:all 0.3s ease;display:inline-flex;align-items:center;gap:0.5em;">
+          <i class="fa-solid fa-download"></i> Download CV
+        </button>
       </div>
       <div style="flex:0 0 200px;display:flex;align-items:center;justify-content:center;">
         <img id="profileImg" src="AF-108302.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;object-fit:cover;box-shadow:0 2px 16px #2196F333;border:4px solid #2196F3;" />
       </div>
     </section>
     <div class="about">
-      🔭 Currently working on <b>Machine Learning and Data Science projects</b>.<br>
-      👯 Open to collaborating on <b>open source ML projects and data science initiatives</b>.<br>
-      💬 Ask me about <b>Python, Scikit-learn, Pandas, Data Visualization, and ML Algorithms</b>.<br>
+      🔭 Currently working on <b>Machine Learning, Data Science, and Cybersecurity projects</b>.<br>
+      👯 Open to collaborating on <b>open source ML projects, data science initiatives, and security research</b>.<br>
+      💬 Ask me about <b>Python, Scikit-learn, Pandas, Data Visualization, ML Algorithms, Network Security, and Penetration Testing</b>.<br>
+      🔒 Specializing in <b>Vulnerability Assessment, Malware Analysis, and Ethical Hacking</b>.<br>
       📫 Reach me at <b>imondol41@gmail.com</b>.<br>
-      ⚡ Fun fact: <b>I love turning complex data into actionable insights!</b>
+      ⚡ Fun fact: <b>I love turning complex data into actionable insights and securing systems from cyber threats!</b>
     </div>
     <div class="section-title">🛠️ Languages & Tools</div>
     <div class="skills">
@@ -52,6 +56,24 @@
       <span class="skill-pill">MongoDB</span>
       <span class="skill-pill">AWS</span>
       <span class="skill-pill">Azure</span>
+      <span class="skill-pill skill-security">Wireshark</span>
+      <span class="skill-pill skill-security">Nmap</span>
+      <span class="skill-pill skill-security">Burp Suite</span>
+      <span class="skill-pill skill-security">Metasploit</span>
+      <span class="skill-pill skill-security">Kali Linux</span>
+      <span class="skill-pill skill-security">Acunetix</span>
+      <span class="skill-pill skill-security">Nessus</span>
+      <span class="skill-pill skill-security">SQLMap</span>
+      <span class="skill-pill skill-security">Amass</span>
+      <span class="skill-pill skill-security">Recon-ng</span>
+      <span class="skill-pill skill-security">Subfinder</span>
+      <span class="skill-pill skill-security">WP_wordfence</span>
+
+      <span class="skill-pill skill-security">Nuclei</span>
+      <span class="skill-pill skill-security">Paramspider</span>
+  
+      <span class="skill-pill skill-security">Nikto</span>
+      
     </div>
     <div class="section-title">🎯 Featured Projects</div>
     <div class="projects">
@@ -159,21 +181,38 @@
     <div class="section-title">EXPERIENCES</div>
     <h2 style="text-align:center;font-weight:900;">Work Experience</h2>
     <div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-      <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.5em;">
-        <span style="background:#2196F3;color:#fff;padding:0.3em 1em;border-radius:999px;font-weight:700;">2021</span>
-        <span style="font-weight:700;">Cyber Security Intern</span>
-      </div>
-      <div style="color:var(--text-secondary);margin-bottom:0.5em;">Ecodation <a href="#" style="color:var(--accent);font-size:0.95em;">↗</a></div>
+      <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Junior Network Engineer</div>
+      <div style="color:var(--accent2);font-weight:700;">NCSC, SMUCT</div>
+      <div style="color:var(--text-secondary);margin-bottom:0.5em;">2023 - Present</div>
       <ul style="color:var(--text-secondary);font-size:1em;line-height:1.6;margin-bottom:0.5em;">
-        <li>The importance of Cyber Security in organisations.</li>
-        <li>Workgroup & Active Directory.</li>
-        <li>ISO 27001.</li>
-        <li>The current GDPR laws.</li>
-        <li>LAN, WAN & VLAN.</li>
-        <li>VPN, IPSEC-VPN, MPLS-VPN & Site-to-Site VPN Concepts.</li>
-        <li>TCP & UDP ports, Inbound- and Outbound Rules.</li>
+        <li>Coordinates with other club officers and members.</li>
+        <li>Organized and coordinated workshop and CTF challenges.</li>
+        <li>Oversees specific club activities, such as training sessions or competitions.</li>
+        <li>Manages communication with university administration and external organizations.</li>
       </ul>
-      <a href="#" style="color:var(--accent2);font-weight:700;">Certificates →</a>
+      <div style="color:var(--accent2);font-weight:700;">Ex-Secretory and Running President</div>
+      <div style="color:var(--text-secondary);margin-bottom:0.5em;">June 2024 - March 2025</div>
+    </div>
+    <div class="project-card" style="max-width:600px;margin:1.5rem auto;">
+      <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Network System Designer</div>
+      <div style="color:var(--accent2);font-weight:700;">VirexBD Ltd.</div>
+      <ul style="color:var(--text-secondary);font-size:1em;line-height:1.6;margin-bottom:0.5em;">
+        <li>Designed network systems for foreign companies and managed the whole system.</li>
+        <li>Consulted on existing clients' network system issues.</li>
+      </ul>
+    </div>
+    <div class="project-card" style="max-width:600px;margin:1.5rem auto;">
+      <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Malware Analyst</div>
+      <div style="color:var(--accent2);font-weight:700;">Areva Web Security</div>
+      <div style="color:var(--text-secondary);margin-bottom:0.5em;">March 2024 - January 2026 | Remote</div>
+      <div style="color:var(--text-secondary);margin-bottom:0.5em;">Dhaka, Bangladesh</div>
+      <ul style="color:var(--text-secondary);font-size:1em;line-height:1.6;margin-bottom:0.5em;">
+        <li>Worked as a malware analyst and remove it from my website.</li>
+        <li>Tried and found bugs, sent bug finding reports.</li>
+        <li>Information Security Analysis</li>
+        <li>Vulnerability Assessment and Penetration Testing (VAPT)</li>
+        <li>WordPress malware removal</li>
+      </ul>
     </div>
     <div class="section-title">Education</div>
     <div class="project-card" style="max-width:600px;margin:1.5rem auto;">
@@ -191,72 +230,60 @@
     
     <div class="section-title">🏆 Certifications</div>
     <h2 style="text-align:center;font-weight:900;">Professional Certifications</h2>
-    <div style="max-width:800px;margin:2rem auto;">
-      <!-- Add Certificate Upload Option -->
-      <div style="text-align:center;margin-bottom:2rem;">
-        <label for="certUpload" style="display:inline-block;background:#2196F3;color:#fff;padding:0.8em 2em;border-radius:8px;font-weight:700;cursor:pointer;transition:background 0.3s;">
-          <i class="fa-solid fa-plus"></i> Add New Certificate
-        </label>
-        <input type="file" id="certUpload" accept="image/*,.pdf" style="display:none;" multiple />
+    <div style="max-width:800px;margin:2rem auto;display:flex;flex-direction:column;gap:1.5rem;">
+      <!-- Certification 1 -->
+      <div class="project-card" style="border-left:4px solid #2196F3;">
+        <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.5em;">
+          <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
+          <span style="font-weight:700;font-size:1.15em;">Summarize and simplify information with Microsoft 365 Copilot</span>
+        </div>
+        <div style="color:var(--accent2);font-weight:600;margin-bottom:0.5em;">Microsoft</div>
+        <div style="color:var(--text-secondary);margin-bottom:0.8em;">
+          <i class="fa-solid fa-calendar"></i> 2025
+        </div>
+        <img src="Screenshot 2026-02-05 012733.png" alt="Microsoft Certificate" style="width:100%;max-width:600px;border-radius:8px;margin-top:0.5em;" />
       </div>
       
-      <div id="certificatesList" style="display:flex;flex-direction:column;gap:1.5rem;">
-        <!-- Certification 1 -->
-        <div class="project-card" style="border-left:4px solid #2196F3;">
-          <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.5em;">
-            <div style="flex:1;">
-              <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.3em;">
-                <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
-                <span style="font-weight:700;font-size:1.15em;">Summarize and simplify information with Microsoft 365 Copilot</span>
-              </div>
-              <div style="color:var(--accent2);font-weight:600;margin-bottom:0.3em;">Microsoft</div>
-              <div style="color:var(--text-secondary);">
-                <i class="fa-solid fa-calendar"></i> 2025
-              </div>
-            </div>
-            <button onclick="deleteCert(this)" style="background:#f44336;color:#fff;border:none;padding:0.5em 1em;border-radius:6px;cursor:pointer;font-size:0.9em;">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
+      <!-- Certification 2 -->
+      <div class="project-card" style="border-left:4px solid #2196F3;">
+        <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.5em;">
+          <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
+          <span style="font-weight:700;font-size:1.15em;">Ethical hacking and Cyber Security</span>
         </div>
-        
-        <!-- Certification 2 -->
-        <div class="project-card" style="border-left:4px solid #2196F3;">
-          <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.5em;">
-            <div style="flex:1;">
-              <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.3em;">
-                <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
-                <span style="font-weight:700;font-size:1.15em;">Ethical hacking and Cyber Security</span>
-              </div>
-              <div style="color:var(--accent2);font-weight:600;margin-bottom:0.3em;">Bangle black diamond</div>
-              <div style="color:var(--text-secondary);">
-                <i class="fa-solid fa-calendar"></i> 2024
-              </div>
-            </div>
-            <button onclick="deleteCert(this)" style="background:#f44336;color:#fff;border:none;padding:0.5em 1em;border-radius:6px;cursor:pointer;font-size:0.9em;">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
+        <div style="color:var(--accent2);font-weight:600;margin-bottom:0.5em;">Bangle black diamond</div>
+        <div style="color:var(--text-secondary);margin-bottom:0.8em;">
+          <i class="fa-solid fa-calendar"></i> 2024
         </div>
-        
-        <!-- Certification 3 -->
-        <div class="project-card" style="border-left:4px solid #2196F3;">
-          <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.5em;">
-            <div style="flex:1;">
-              <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.3em;">
-                <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
-                <span style="font-weight:700;font-size:1.15em;">Web Security Cybersecurity and Ethical Hacking</span>
-              </div>
-              <div style="color:var(--accent2);font-weight:600;margin-bottom:0.3em;">Arena</div>
-              <div style="color:var(--text-secondary);">
-                <i class="fa-solid fa-calendar"></i> 2025
-              </div>
-            </div>
-            <button onclick="deleteCert(this)" style="background:#f44336;color:#fff;border:none;padding:0.5em 1em;border-radius:6px;cursor:pointer;font-size:0.9em;">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
+        <img src="Screenshot 2026-02-05 012708.png" alt="Ethical Hacking Certificate" style="width:100%;max-width:600px;border-radius:8px;margin-top:0.5em;" />
+      </div>
+      
+      <!-- Certification 3 -->
+      <div class="project-card" style="border-left:4px solid #2196F3;">
+        <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.5em;">
+          <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
+          <span style="font-weight:700;font-size:1.15em;">Web Security Cybersecurity and Ethical Hacking</span>
         </div>
+        <div style="color:var(--accent2);font-weight:600;margin-bottom:0.5em;">Arena</div>
+        <div style="color:var(--text-secondary);margin-bottom:0.8em;">
+          <i class="fa-solid fa-calendar"></i> 2025
+        </div>
+        <img src="cert3.jpg" alt="Web Security Certificate" style="width:100%;max-width:600px;border-radius:8px;margin-top:0.5em;" />
+      </div>
+      
+      <!-- Certification 4 - Competitive Programming -->
+      <div class="project-card" style="border-left:4px solid #FFD700;">
+        <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.5em;">
+          <i class="fa-solid fa-trophy" style="color:#FFD700;font-size:1.5em;"></i>
+          <span style="font-weight:700;font-size:1.15em;">Competitive Programming - Runner Up</span>
+        </div>
+        <div style="color:var(--accent2);font-weight:600;margin-bottom:0.5em;">Programming Competition</div>
+        <div style="color:var(--text-secondary);margin-bottom:0.8em;">
+          <i class="fa-solid fa-calendar"></i> 2025
+        </div>
+        <div style="background:#FFF9E6;padding:0.8em;border-radius:8px;margin-bottom:0.8em;">
+          <span style="color:#F57C00;font-weight:700;"><i class="fa-solid fa-medal"></i> 2nd Place - Runner Up</span>
+        </div>
+        <img src="cert4.jpg" alt="Competitive Programming Certificate" style="width:100%;max-width:600px;border-radius:8px;margin-top:0.5em;" />
       </div>
     </div>
     
@@ -323,7 +350,7 @@
     </div>
     <div style="display:flex;gap:0.7rem;">
       <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">Professional</span>
-      <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">5 years experience</span>
+      <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">2 years experience</span>
     </div>
   </div>
   <!-- Duplicate and edit the above block for each skill -->
@@ -337,7 +364,7 @@
     </div>
     <div style="display:flex;gap:0.7rem;">
       <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">Professional</span>
-      <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">4 years experience</span>
+      <span style="background:#1976d2;color:#fff;padding:0.3em 1em;border-radius:8px;font-weight:600;">1 years experience</span>
     </div>
   </div>
   <!-- Add more skill blocks as needed -->
@@ -362,88 +389,13 @@
         <div style="padding:1em;font-weight:700;font-size:1.1em;">Wireshark</div>
       </div>
       <div class="project-card" style="padding:0;overflow:hidden;grid-column:span 2;">
-        <img src="sqlmap.png" alt="SQLMap" style="width:100%;border-radius:var(--radius) var(--radius) 0 0;object-fit:cover;max-height:180px;" />
+        <img src="Screenshot 2026-02-05 005951.png" alt="SQLMap" style="width:100%;border-radius:var(--radius) var(--radius) 0 0;object-fit:cover;max-height:180px;" />
         <div style="padding:1em;font-weight:700;font-size:1.1em;">SQLMap</div>
       </div>
     </div>
     <!-- =====================
       End Editable Portfolio Sections
     ===================== -->
-    <!-- =====================
-  Ibrahim Kholilulla's Professional Details
-===================== -->
-<div class="section-title">WORK EXPERIENCE</div>
-<div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-  <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Junior Network Engineer</div>
-  <div style="color:var(--accent2);font-weight:700;">NCSC, SMUCT</div>
-  <div style="color:var(--text-secondary);margin-bottom:0.5em;">2023 - Present</div>
-  <ul style="color:var(--text-secondary);font-size:1em;line-height:1.6;margin-bottom:0.5em;">
-    <li>Coordinates with other club officers and members.</li>
-    <li>Organized and coordinated workshop and CTF challenges.</li>
-    <li>Oversees specific club activities, such as training sessions or competitions.</li>
-    <li>Manages communication with university administration and external organizations.</li>
-  </ul>
-  <div style="color:var(--accent2);font-weight:700;">Ex-Secretory and Running President</div>
-  <div style="color:var(--text-secondary);margin-bottom:0.5em;">June 2024 - March 2025</div>
-</div>
-<div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-  <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Network System Designer</div>
-  <div style="color:var(--accent2);font-weight:700;">VirexBD Ltd.</div>
-  <ul style="color:var(--text-secondary);font-size:1em;line-height:1.6;margin-bottom:0.5em;">
-    <li>Designed network systems for foreign companies and managed the whole system.</li>
-    <li>Consulted on existing clients’ network system issues.</li>
-  </ul>
-</div>
-<div class="section-title">EDUCATION</div>
-<div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-  <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">BSc. in CSIT</div>
-  <div style="color:var(--accent2);font-weight:700;">Shanto-Mariam University of Creative Technology</div>
-  <div style="color:var(--text-secondary);margin-bottom:0.5em;">2021 - 2025</div>
-  <div style="color:var(--text-secondary);font-size:1em;line-height:1.6;">3.25 CGPA out of 4.00</div>
-</div>
-<div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-  <div style="font-weight:900;font-size:1.2em;margin-bottom:0.5em;">Higher Secondary in Science</div>
-  <div style="color:var(--accent2);font-weight:700;">Monipur High School & College</div>
-  <div style="color:var(--text-secondary);margin-bottom:0.5em;">2016 - 2018</div>
-  <div style="color:var(--text-secondary);font-size:1em;line-height:1.6;">GPA: 3.42 GPA out of  5.00</div>
-</div>
-<div class="section-title">SKILLS</div>
-<div class="project-card" style="max-width:600px;margin:1.5rem auto;">
-<div class="skills" style="flex-wrap:wrap;gap:2rem;justify-content:center;">
-  <div style="flex:1;min-width:220px;text-align:left;">
-    <b>Personal Management Skills</b>
-    <ul style="color:var(--text-secondary);font-size:1.05rem;line-height:1.7;">
-      <li>Time Management</li>
-      <li>Negotiation</li>
-      <li>Critical Thinking</li>
-      <li>Communication Skills</li>
-      <li>Leadership</li>
-    </ul>
-  </div>
-  </div>
-  </div>
-  
-  </div>
-  </div>
-</div>
-</div>
-  <div class="section-title">PROJECTS</div>
-   <div class="projects">
-   <div class="project-card">
-    <div class="project-title">Uben Monkey Shopping Website</div>
-    <div class="project-desc">Integrated a diverse set of inbuilt problem statements. Utilized MySQL for efficient data storage and retrieval. Responsive design.</div>
-    <div class="project-tech">
-      <span>HTML</span><span>CSS</span><span>MySQL</span>
-    </div>
-   </div>
-  <div class="project-card">
-    <div class="project-title">ATM Machine Simulation</div>
-    <div class="project-desc">Simulation of a bank ATM machine with features like password change, add money, withdraw money, automated balance update, and current balance display.</div>
-    <div class="project-tech">
-      <span>C Programming</span>
-    </div>
-  </div>
-</div>
    <div class="section-title">📧 Contact Me</div>
     <div class="contact">
       <div class="contact-links">
@@ -452,6 +404,9 @@
         </a>
         <a href="https://linkedin.com/in/ibrahim-kholilulla-32230431a" target="_blank">
           <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+        </a>
+        <a href="https://www.fiverr.com/imondol41" target="_blank">
+          <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" alt="Fiverr" />
         </a>
        
         
@@ -466,62 +421,32 @@
 ===================== -->
   </div>
   <script>
-    document.getElementById('imgUpload').addEventListener('change', function(e) {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(ev) {
-          document.getElementById('profileImg').src = ev.target.result;
-        };
-        reader.readAsDataURL(file);
-      }
+    // Download CV functionality
+    document.getElementById('downloadCV').addEventListener('click', function() {
+      const element = document.querySelector('.container');
+      const opt = {
+        margin: 0.5,
+        filename: 'Ibrahim_Kholilulla_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
     });
     
-    // Certificate upload functionality
-    document.getElementById('certUpload').addEventListener('change', function(e) {
-      const files = e.target.files;
-      const certificatesList = document.getElementById('certificatesList');
-      
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const certName = prompt('Enter certification name:', file.name.replace(/\.[^/.]+$/, ""));
-        const certIssuer = prompt('Enter issuer/organization:');
-        const certYear = prompt('Enter year:');
-        
-        if (certName && certIssuer && certYear) {
-          const newCert = document.createElement('div');
-          newCert.className = 'project-card';
-          newCert.style.borderLeft = '4px solid #2196F3';
-          newCert.innerHTML = `
-            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.5em;">
-              <div style="flex:1;">
-                <div style="display:flex;align-items:center;gap:0.7em;margin-bottom:0.3em;">
-                  <i class="fa-solid fa-certificate" style="color:#2196F3;font-size:1.5em;"></i>
-                  <span style="font-weight:700;font-size:1.15em;">${certName}</span>
-                </div>
-                <div style="color:var(--accent2);font-weight:600;margin-bottom:0.3em;">${certIssuer}</div>
-                <div style="color:var(--text-secondary);">
-                  <i class="fa-solid fa-calendar"></i> ${certYear}
-                </div>
-              </div>
-              <button onclick="deleteCert(this)" style="background:#f44336;color:#fff;border:none;padding:0.5em 1em;border-radius:6px;cursor:pointer;font-size:0.9em;">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          `;
-          certificatesList.appendChild(newCert);
+    // Profile image upload
+    const imgUpload = document.getElementById('imgUpload');
+    if (imgUpload) {
+      imgUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(ev) {
+            document.getElementById('profileImg').src = ev.target.result;
+          };
+          reader.readAsDataURL(file);
         }
-      }
-      
-      // Reset file input
-      e.target.value = '';
-    });
-    
-    // Delete certificate function
-    function deleteCert(button) {
-      if (confirm('Are you sure you want to delete this certificate?')) {
-        button.closest('.project-card').remove();
-      }
+      });
     }
   </script>
 </body>
