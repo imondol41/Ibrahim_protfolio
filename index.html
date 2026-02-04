@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -20,9 +19,7 @@
         <div style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:1.2rem;max-width:420px;">
           Hi, my name is Ibrahim Kholilulla, a Junior Cyber Security Engineer in search of new opportunities. Passionate about network security, data analytics, and building secure systems.
         </div>
-        <button id="downloadCV" style="background:linear-gradient(135deg,#2196F3,#1976D2);color:#fff;font-weight:700;padding:0.8em 2em;border:none;border-radius:8px;font-size:1rem;cursor:pointer;box-shadow:0 4px 12px rgba(33,150,243,0.4);transition:all 0.3s ease;display:inline-flex;align-items:center;gap:0.5em;">
-          <i class="fa-solid fa-download"></i> Download CV
-        </button>
+        
       </div>
       <div style="flex:0 0 200px;display:flex;align-items:center;justify-content:center;">
         <img id="profileImg" src="AF-108302.jpg" alt="Profile Image" style="width:200px;height:200px;border-radius:50%;object-fit:cover;box-shadow:0 2px 16px #2196F333;border:4px solid #2196F3;" />
@@ -421,33 +418,16 @@
 ===================== -->
   </div>
   <script>
-    // Download CV functionality
-    document.getElementById('downloadCV').addEventListener('click', function() {
-      const element = document.querySelector('.container');
-      const opt = {
-        margin: 0.5,
-        filename: 'Ibrahim_Kholilulla_CV.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      html2pdf().set(opt).from(element).save();
+    document.getElementById('imgUpload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          document.getElementById('profileImg').src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
     });
-    
-    // Profile image upload
-    const imgUpload = document.getElementById('imgUpload');
-    if (imgUpload) {
-      imgUpload.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function(ev) {
-            document.getElementById('profileImg').src = ev.target.result;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-    }
   </script>
 </body>
 </html>
